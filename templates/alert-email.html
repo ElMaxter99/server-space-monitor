@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Alerta de uso de disco</title>
+</head>
+
+<body
+  style="font-family: Arial, sans-serif; color:#333; max-width:600px; margin:auto; border:1px solid #ddd; border-radius:8px; overflow:hidden;">
+  <div
+    style="background-color:{{color}}; padding:16px; text-align:center; color:#fff; font-size:20px; font-weight:bold;">
+    Alerta: Uso de Disco {{percent}}%
+  </div>
+  <div style="padding:20px;">
+    <p style="font-size:16px;">Servidor: <strong>{{serverName}}</strong></p>
+    <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+      <tr>
+        <td style="padding:8px; border-bottom:1px solid #eee;">Total:</td>
+        <td style="padding:8px; border-bottom:1px solid #eee;"><strong>{{total}}</strong></td>
+      </tr>
+      <tr>
+        <td style="padding:8px; border-bottom:1px solid #eee;">Usado:</td>
+        <td style="padding:8px; border-bottom:1px solid #eee;"><strong>{{used}}</strong></td>
+      </tr>
+      <tr>
+        <td style="padding:8px; border-bottom:1px solid #eee;">Disponible:</td>
+        <td style="padding:8px; border-bottom:1px solid #eee;"><strong>{{available}}</strong></td>
+      </tr>
+    </table>
+    <div style="margin-top:20px;">
+      <div style="background:#f5f5f5; border-radius:6px; height:24px; overflow:hidden;">
+        <div
+          style="height:100%; width:{{percent}}%; background-color:{{color}}; text-align:center; color:white; line-height:24px; font-weight:bold;">
+          {{percent}}%
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:20px; font-size:14px; color:#666;">Este correo se envió automáticamente por Server Space
+      Monitor.</p>
+  </div>
+</body>
+
+</html>
