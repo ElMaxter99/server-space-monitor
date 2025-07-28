@@ -1,0 +1,28 @@
+{
+  "name": "server-space-monitor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Monitor de espacio en disco con alertas por email",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElMaxter99/server-space-monitor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ElMaxter99/server-space-monitor/issues"
+  },
+  "homepage": "https://github.com/ElMaxter99/server-space-monitor#readme",
+  "dependencies": {
+    "check-disk-space": "^3.4.0",
+    "express": "^5.1.0",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^7.0.5"
+  }
+}

@@ -1,0 +1,11 @@
+services:
+  disk-monitor:
+    build: .
+    container_name: disk-monitor
+    env_file: .env
+    volumes:
+      - /:/host:ro # Montamos todo el filesystem del host en /host (solo lectura)
+    command: ["npm", "start"]
+    ports:
+      - "${PORT:-5000}:${PORT:-5000}"
+    restart: unless-stopped
