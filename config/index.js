@@ -1,6 +1,10 @@
 'use strict';
 
 module.exports = {
+  app: {
+    port:process.env.PORT,
+    serverName: process.env.NAME_SERVER
+  },
   smtp: {
     host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT,

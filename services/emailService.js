@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-const { smtp } = require('../config');
+const { smtp, app } = require('../config');
 
 const transporter = nodemailer.createTransport({
   host: smtp.host,
@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 async function sendAlert(diskInfo) {
   const subject = `Alerta: Uso de disco ${diskInfo.percentUsed}%`;
   const text = `
-    Servidor: ${smtp.host}
+    Servidor: ${ app.serverName || smtp.host}
     Total: ${diskInfo.total}
     Usado: ${diskInfo.used}
     Disponible: ${diskInfo.available}
