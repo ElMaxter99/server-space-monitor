@@ -22,7 +22,7 @@ async function sendAlert(diskInfo) {
     `;
 
   await transporter.sendMail({
-    from: smtp.user,
+    from: `'Server Space Monitor ~' <${smtp.from}>`,
     to: smtp.to,
     subject,
     text
