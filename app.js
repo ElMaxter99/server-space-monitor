@@ -12,7 +12,17 @@ async function checkDisk() {
   const diskInfo = await getDiskUsage(monitor.diskPath);
   if (!diskInfo) return;
 
-  console.log(`[${new Date().toISOString()}] Uso de disco: ${diskInfo.percentUsed}%`);
+  const now = new Date().toISOString();
+
+  console.log(`
+[${now}] Disk Usage Report:
+-----------------------------------
+Total:       ${diskInfo.total}
+Used:        ${diskInfo.used}
+Available:   ${diskInfo.available}
+Usage:       ${diskInfo.percentUsed}%
+-----------------------------------
+`);
 
   const shouldSend = monitor.sendAlways || diskInfo.percentUsed >= monitor.threshold;
 
@@ -21,6 +31,6 @@ async function checkDisk() {
   }
 }
 
-console.log('Monitor de disco iniciado...');
-setInterval(checkDisk, monitor.intervalMinutes * 60 * 1000);
+console.log('✅ Disk monitor started...');
 checkDisk();
+setInterval(checkDisk, monitor.intervalMinutes * 60 * 1000);
