@@ -70,7 +70,7 @@ View real-time logs:
 docker logs -f disk-monitor
 ```
 
-##🚀 How It Works
+## 🚀 How It Works
 The application runs a cron job that checks disk usage at ``DISK_PATH`` every `INTERVAL_MINUTES`.
 
 If the percentage of disk used exceeds THRESHOLD (or if ``SEND_ALWAYS`` is true), an email alert is sent.
