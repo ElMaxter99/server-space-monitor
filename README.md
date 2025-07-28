@@ -48,22 +48,23 @@ SEND_ALWAYS=false   # true = always send, false = only if THRESHOLD is exceeded
 HOURS_ALLOWED=08-20 # Example: from 08:00 to 20:00
 ```
 
- Important Notes
+### Important Notes
 Gmail Users: If you're using Gmail, you'll need to generate an App Password from your Google account with 2FA enabled.
 
 DISK_PATH=/host: The Docker container mounts the host's root directory (/) into /host inside the container, making /host the correct path to monitor.
 
- Running with Docker
-Build the Docker image:
+### Running with Docker
 
-```Bash
-docker-compose build --no-cache
+Give execute permissions (first time only):
+```bash
+chmod +x start.sh
 ```
-Start the service:
 
-```Bash
-docker-compose up -d
+Run the script to stop old containers, rebuild the image, and start the app:
+```bash
+./start.sh
 ```
+
 View real-time logs:
 
 ```Bash
