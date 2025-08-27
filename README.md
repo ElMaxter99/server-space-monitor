@@ -1,6 +1,14 @@
-# 💻 Server Space Monitor
+# 💻 Server Space Monitor <img src="./readme-assets/logo.png" alt="Logo" width="35"/>
 
 Monitor your server's disk space and send email alerts using Node.js, Express, Nodemailer, and Docker.
+
+## Images
+Mail Alert:  
+<img src="./readme-assets/mail-screenshot.png" alt="Mail Alert" width="500"/>
+
+
+Logs:  
+<img src="./readme-assets/logs-screenshot.png" alt="Dashboard" width="500"/>
 
 ---
 
